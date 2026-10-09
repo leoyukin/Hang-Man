@@ -1,0 +1,120 @@
+/* Hangman — starter styles. Focus on script.js */
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background: #0f0f1a;
+    color: #eee;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 4px;
+    color: #a78bfa;
+}
+
+#lives {
+    font-size: 1.1rem;
+    color: #f87171;
+    margin-bottom: 28px;
+}
+
+/* Each blank/letter is a span inside #word-display */
+#word-display {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#word-display span {
+    width: 36px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-bottom: 3px solid #a78bfa;
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* The A–Z keyboard grid */
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    max-width: 420px;
+    margin-bottom: 28px;
+}
+
+#keyboard button {
+    width: 44px;
+    height: 44px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    background: #1e1b3a;
+    color: #eee;
+    border: 2px solid #3b3460;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.15s;
+}
+
+#keyboard button:hover:not(:disabled) {
+    background: #3b3460;
+}
+
+/* Correct guess — turn green */
+#keyboard button.correct {
+    background: #14532d;
+    border-color: #22c55e;
+    color: #22c55e;
+}
+
+/* Wrong guess — turn red */
+#keyboard button.wrong {
+    background: #450a0a;
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+#keyboard button:disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+#message {
+    font-size: 1.3rem;
+    font-weight: bold;
+    min-height: 32px;
+    color: #fbbf24;
+}
+
+#word-is {
+    font-size: 1.3rem;
+    font-weight: bold;
+    min-height: 32px;
+    color: #fb2424;
+}
+
+#restart {
+    margin-top: 16px;
+    padding: 10px 28px;
+    background: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background: #6d28d9;
+}
